@@ -120,7 +120,7 @@ class Treal(ThreadedStenotypeBase):
                 if self._reconnect():
                     log.warning('Treal reconnected.')
             else:
-                if len(packet) is 5:
+                if len(packet) == 5:
                     handler.update(packet)
 
     def stop_capture(self):
